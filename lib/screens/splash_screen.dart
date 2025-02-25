@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:latihan_1/constants/colors.dart';
-import 'package:latihan_1/gen/assets.gen.dart';
 import 'package:latihan_1/screens/home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -26,12 +24,26 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.backgroundColor,
+      backgroundColor: Color.fromARGB(255, 52, 189, 243), 
       body: Center(
-        child: Image.asset(
-          Assets.images.image1.path,
-          width: 150,
-          height: 150,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              Icons.airplanemode_active, 
+              size: 100, 
+              color: Colors.white,
+            ),
+            SizedBox(height: 20), 
+            Text(
+              "Tourist Ticket",
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+          ],
         ),
       ),
     );

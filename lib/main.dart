@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:latihan_1/screens/splash_screen.dart';
-import 'package:latihan_1/screens/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());

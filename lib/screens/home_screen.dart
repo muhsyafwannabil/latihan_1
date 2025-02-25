@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:latihan_1/constants/colors.dart';
-import 'package:latihan_1/gen/assets.gen.dart';
+import 'package:latihan_1/screens/dashboard_screen.dart';
+import 'package:latihan_1/utils/navigation_extension.dart'; 
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -8,37 +8,28 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home'),
-        backgroundColor: AppColors.primaryColor,
-      ),
-      body: Center(
+      body: Padding(
+        padding: EdgeInsets.all(20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            // Menampilkan Icon
-            Image.asset(
-              Assets.icons.logo1.path,
-              width: 50,
-              height: 50,
+            Text("Login", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+            SizedBox(height: 20),
+            TextField(
+              decoration: InputDecoration(labelText: "Email", border: OutlineInputBorder()),
             ),
-            const SizedBox(height: 20),
-
-            // Menampilkan Image
-            Image.asset(
-              Assets.images.image1.path,
-              width: 100,
-              height: 100,
+            SizedBox(height: 10),
+            TextField(
+              decoration: InputDecoration(labelText: "Password", border: OutlineInputBorder()),
+              obscureText: true,
             ),
-            const SizedBox(height: 20),
-
-            Text(
-              'Hello Flutter!',
-              style: TextStyle(
-                color: AppColors.textColor,
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                context.push(DashboardScreen());
+              },
+              child: Text("Login"),
             ),
           ],
         ),
