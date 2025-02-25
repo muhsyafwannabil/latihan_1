@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:latihan_1/utils/navigation_extension.dart';
 import 'package:latihan_1/screens/home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -12,12 +13,8 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    // Timer untuk pindah ke HomeScreen setelah 3 detik
     Future.delayed(Duration(seconds: 3), () {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => const HomeScreen()),
-      );
+      context.pushReplacement(HomeScreen()); 
     });
   }
 
