@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:latihan_1/utils/navigation_extension.dart';
-import 'package:latihan_1/screens/home_screen.dart';
+import 'package:latihan_1/screens/login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -14,31 +14,23 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Future.delayed(Duration(seconds: 3), () {
-      context.pushReplacement(HomeScreen()); 
+      context.pushReplacement(LoginScreen()); // Menuju Login setelah Splash
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 52, 189, 243), 
+      backgroundColor: Color.fromARGB(255, 63, 184, 249),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              Icons.airplanemode_active, 
-              size: 100, 
-              color: Colors.white,
-            ),
-            SizedBox(height: 20), 
+            Icon(Icons.airplanemode_active, size: 100, color: Colors.white),
+            SizedBox(height: 20),
             Text(
               "Tourist Ticket",
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-              ),
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
             ),
           ],
         ),
