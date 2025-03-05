@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:latihan_1/screens/home_screen.dart';
 import 'package:latihan_1/screens/tickets_screen.dart';
 import 'package:latihan_1/screens/profile_screen.dart';
+import 'package:latihan_1/screens/order_page.dart'; // Import OrderPage
 
 class MainScreen extends StatefulWidget {
   @override
@@ -9,30 +9,29 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  int _selectedIndex = 0; // Untuk menyimpan index menu yang dipilih
+  int _selectedIndex = 0; 
 
-  // List halaman yang akan ditampilkan berdasarkan index yang dipilih
   final List<Widget> _pages = [
-    HomeScreen(),
+    OrderPage(), // Ganti HomeScreen menjadi OrderPage
     TicketsScreen(),
     ProfileScreen(),
   ];
 
   void _onItemTapped(int index) {
     setState(() {
-      _selectedIndex = index; // Mengubah halaman saat menu ditekan
+      _selectedIndex = index; 
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _pages[_selectedIndex], // Menampilkan halaman sesuai index
+      body: _pages[_selectedIndex], 
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: "Order"),
           BottomNavigationBarItem(icon: Icon(Icons.airplane_ticket), label: "Tickets"),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
         ],

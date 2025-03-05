@@ -1,0 +1,2 @@
+C:/Users/LOQ/Dart idn/flutter/latihan sama kk syafiq/latihan_1/android/app/.cxx/Debug/4qh2d4s2/x86_64/CMakeFiles/edit_cache.dir
+C:/Users/LOQ/Dart idn/flutter/latihan sama kk syafiq/latihan_1/android/app/.cxx/Debug/4qh2d4s2/x86_64/CMakeFiles/rebuild_cache.dir
